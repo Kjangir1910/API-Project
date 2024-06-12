@@ -4,7 +4,7 @@ const User = require('../Models/user')
 
 
 // Register User
-router.post('/register' , async(req, res) => {
+router.post('/' , async(req, res) => {
     try {
         const user = new User(req.body)
         await user.save()
@@ -17,7 +17,7 @@ router.post('/register' , async(req, res) => {
 
 // Get User Data
 
-router.get('/fetch', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const users = await User.find()
         res.status(200).send(users) 
