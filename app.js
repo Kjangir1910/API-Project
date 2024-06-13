@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require ('mongoose')
 const bodyParser = require('body-parser')
+const path = require("path");
+
 
 require('dotenv').config()
 
@@ -27,7 +29,7 @@ app.use('/api/users', userRoute)
 
 // Server static file of HTML
 
-app.use(express.static('views'))
+app.use(express.static(path.join(__dirname, 'views')))
 
 
 // Server
