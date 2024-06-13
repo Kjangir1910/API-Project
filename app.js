@@ -29,10 +29,10 @@ app.use('/api/users', userRoute)
 
 // Server static file of HTML
 
-app.use(express.static(path.join(__dirname, 'views')))
+app.use(express.static(path.join(__dirname, 'Views')))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Views', 'index.html'));
 });
 
 
